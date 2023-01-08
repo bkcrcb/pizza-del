@@ -1,16 +1,18 @@
 const Order = require('../../../models/order')
+const Branch = require('../../../models/driver')
 const moment = require('moment')
 function orderController () {
     return {
         store(req, res) {
-            const { phone, address} = req.body
-            if(phone=='' ||   address=='') {
+            const { phone, address,Branch} = req.body
+            if(phone=='' ||   address=='' || Branch=='') {
                 return res.status(422).json({ message : 'All fields are required' });
             }
             const order = new Order({
                 customerId: req.user._id,
                 items: req.session.cart.items,
                 total_cost:req.session.cart.totalPrice ,
+                Branch,
                 phone,
                 address,
             })

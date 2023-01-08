@@ -10,7 +10,7 @@ const orderSchema = new Schema({
     items: { type: Object, required: true },
     phone: { type: String, required: true},
     address: { type: String, required: true},
-    Branch: { type: String,ref:'Branch',default:'vvm'},
+    Branch: { type: String,ref:'Branch'},
     status: { type: String, default: 'order_placed'},
     total_cost:{ type: Number, required: true}
 }, { timestamps: true ,collection: 'orders'})

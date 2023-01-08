@@ -1,9 +1,13 @@
 const { json } = require("express")
-
+const Branch = require('../../../models/Branch')
 function cartController() {
     return {
         index(req, res) {
-            res.render('customers/cart')
+            Branch.find().then(function (Branch) {
+                return res.render('customers/cart', { Branch: Branch })
+            })
+            
+            
         },
         update(req, res) {
             // let cart = {
