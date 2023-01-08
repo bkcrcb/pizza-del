@@ -45,7 +45,7 @@ function authController() {
             return res.render('auth/register')
         },
         async postRegister(req, res) {
-            const {name,email,phone,address,password}=req.body
+            const {name,email,phone,address,password,role}=req.body
             if (name=='' || email=='' || phone=='' || address=='' ||  password=='') {
                 req.flash('error','All fields are required')
                 req.flash('name',name)
