@@ -71,9 +71,8 @@ app.use((req, res, next) => {
     next()
 })
 
-
+require('./routes/web')(app)
 
 app.listen(PORT, ()=>{
     console.log(`Listening on port ${PORT}`)
 })
-require('./routes/web')(app)
