@@ -1,4 +1,4 @@
-[[]]
+[[redirects]]
   from = "/*"
-  to = "https://dreamy-genie-eed18b.netlify.app/"
+  to = "/index.html"
   status = 200
