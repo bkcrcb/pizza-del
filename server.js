@@ -17,7 +17,7 @@ const passport = require('passport')
 
 
 //database connections
-const url ='mongodb://127.0.0.1:27017/PDS';
+const url ='mongodb+srv://bkcrcb:Chaithanyabk10@cluster0.hkgesiy.mongodb.net//PDS';
 mongoose.set('strictQuery', true)
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true}
 ,(err => {
